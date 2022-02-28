@@ -11,8 +11,8 @@ const searchButton = () => {
         input.value = '';
         cardContainer.innerHTML = '';
     }
-    else if (inputValue <= 0) {
-        error.innerText = "Please enter a positive number";
+    else if (inputValue <= 0 || inputValue > 52) {
+        error.innerText = "Please enter a positive number between 1 to 52";
         input.value = '';
         cardContainer.innerHTML = '';
     }
@@ -56,7 +56,7 @@ const cardDetails = (code) => {
             const allCards = data.cards;
             // console.log(allCards);
             const singleCard = allCards.find(card => card.code === code);
-            console.log(singleCard);
+            // console.log(singleCard);
 
             const div = document.createElement('div');
             cardContainer.innerHTML = '';
