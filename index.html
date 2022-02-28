@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="container">
     <h1 class="text-center my-5">Play With Cards API</h1>
 
     <div class="container w-50">
         <div class="d-flex">
-            <input id="input-value" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input id="input-value" class="form-control me-2" type="number" placeholder="Search" aria-label="Search">
             <button onclick="searchButton()" class="btn btn-outline-success" type="submit">Search</button>
         </div>
     </div>
     <h2 id="error" class="text-danger text-center"></h2>
+    <div id="cards-container" class="row"></div>
 
     <script src="./js/index.js"></script>
 </body>
